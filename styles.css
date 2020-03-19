@@ -1,0 +1,118 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    
+    background-color: rgb(31, 33, 35) !important;
+    color: rgba(255, 255, 255, .87);
+
+    font-family: Roboto, sans-serif;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+#chat {
+    padding: 10px;
+
+    overflow: auto;
+
+    height: calc(100% - 60px);
+}
+
+.msg {
+    clear: both;
+
+    padding: 10px;
+
+    margin-bottom: 20px;
+
+    font-size: 16px;
+}
+
+.msg::before {
+    content: attr('data-username');
+}
+
+.msg-me {
+    float: right;
+    background-color: #3F51B5;
+}
+
+.msg-other {
+    float: left;
+    background-color: #424242;
+}
+
+#full-input {
+    height: 50px;
+    width: 100%;
+
+    border-top: 3px solid black;
+
+    padding: 5px;
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    background-color: #424242;
+}
+
+#message-input {
+    width: calc(100% - 60px);
+    height: 100%;
+
+    display: inline-block;
+
+    margin: 0;
+
+    background-color: transparent;
+    color: rgba(255, 255, 255, .87);
+
+    border: none;
+
+    font-size: 16px;
+}
+
+#send-button {
+    height: 100%;
+    width: 50px;
+
+    background-color: #616161;
+    border: none;
+    border-left: #757575;
+
+    padding: 5px;
+
+    display: inline-block;
+
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    background-color: #1c1e1f;
+    color: #c5c1b9;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #2a2c2e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #323537;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #3d4043;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+}
+
+* {
+    scrollbar-color: #2a2c2e #1c1e1f;
+}
