@@ -37,6 +37,16 @@ function updateUI() {
       document.getElementById('chat').appendChild(el);
     }
   }
+
+  let UIMsgs = document.getElementsByClassName('msg');
+
+  if (UIMsgs.length !== chat.length) {
+    for (let e of UIMsgs) {
+      document.getElementById('chat').removeChild(e);
+    }
+
+    updateUI();
+  }
 }
 
 askUsername();
