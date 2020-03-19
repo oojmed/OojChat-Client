@@ -21,7 +21,7 @@ html, body {
     height: calc(100% - 60px);
 }
 
-#chat:first-child {
+.msg:first-child {
     margin-top: 30px;
 }
 
@@ -40,29 +40,30 @@ html, body {
 .msg::before {
     content: attr(data-username);
 
-    position: absolute;
+    position: relative;
     display: block;
 
     margin-top: -35px;
+    margin-bottom: 15px;
     margin-left: -10px;
 }
 
 .msg-me {
     float: right;
-    background-color: #3F51B5;
+    background-color: rgb(42, 55, 122);
 }
 
 
 .msg-other {
     float: left;
-    background-color: #424242;
+    background-color: rgb(61, 64, 67);
 }
 
 #full-input {
     height: 50px;
     width: 100%;
 
-    border-top: 3px solid black;
+    border-top: 3px solid rgb(102, 102, 102);
 
     padding: 5px;
 
@@ -71,7 +72,7 @@ html, body {
     bottom: 0;
     left: 0;
 
-    background-color: #424242;
+    background-color: rgb(61, 64, 67);
 }
 
 #message-input {
@@ -94,15 +95,15 @@ html, body {
     height: 100%;
     width: 50px;
 
-    background-color: #616161;
+    background-color: transparent;
+    color: rgba(255, 255, 255, .87);
     border: none;
-    border-left: #757575;
-
-    padding: 5px;
 
     display: inline-block;
+    position: relative;
 
     margin: 0;
+    bottom: 1.5px;
 }
 
 ::-webkit-scrollbar {

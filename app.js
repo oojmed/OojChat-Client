@@ -39,7 +39,7 @@ function updateUI() {
   }
 }
 
-askUsername();
+// askUsername();
 
 socket.onopen = function(e) {
   socket.send(`username|${username}`);
