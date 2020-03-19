@@ -21,24 +21,37 @@ html, body {
     height: calc(100% - 60px);
 }
 
+#chat:first-child {
+    margin-top: 30px;
+}
+
 .msg {
     clear: both;
 
     padding: 10px;
 
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 
     font-size: 16px;
+
+    max-width: 50%;
 }
 
 .msg::before {
-    content: attr('data-username');
+    content: attr(data-username);
+
+    position: absolute;
+    display: block;
+
+    margin-top: -35px;
+    margin-left: -10px;
 }
 
 .msg-me {
     float: right;
     background-color: #3F51B5;
 }
+
 
 .msg-other {
     float: left;

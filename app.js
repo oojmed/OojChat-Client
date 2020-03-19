@@ -3,6 +3,10 @@ let socket = new WebSocket(`wss://vps.oojmed.com/chat/ws`);
 let chat = [];
 let username = 'unknown-user';
 
+function ping() {
+  socket.send(`ping|${username}`);
+}
+
 function askUsername() {
   username = prompt('Enter Username:');
 }
@@ -39,6 +43,8 @@ askUsername();
 
 socket.onopen = function(e) {
   socket.send(`username|${username}`);
+
+  setInterval(ping, 60000);
 };
 
 socket.onmessage = function(event) {
